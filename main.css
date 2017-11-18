@@ -83,3 +83,5 @@ ul,li {list-style:none;}
 .submenuLink:hover { /* 하위 메뉴의 a 태그의 마우스 오버 스타일 설정 */
   color: green;
 }
+
+#img_list td { width:50px; text-align:center; }
