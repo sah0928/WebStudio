@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html lang="ko-KR">
+<head>
+  <meta charset="utf-8"/>
+  <meta name="description" content="The Overflowing church website's main page" />
+  <meta name="author" content="unikys@gmail.com" />
+  <link rel="stylesheet" type="text/css" href="main.css" title="style" />
+  <title>신상교회</title>
+</head>
+<body class="fullpage">
+<div class="wrap">
+  <div class="header">
+  <div class="top">
+    <div class="content">
+      <div class="util_menu">
+        <a href="sign_in.html" class="btn_login">로그인</a>
+        <a href="sign_up.html" class="btn_signup">회원가입</a>
+      </div>
+    </div>
+  </div>
+  <nav class="topMenu" >
+    <div class="content">
+      <img class="logo" src="img/title.png" href="main.html"/>
+      <ul class="gnb">
+        <li class="topMenuLi">
+          <a class="menuLink">교회소개</a>
+          <ul class="submenu">
+            <li><a class="submenuLink">인사말</a></li>
+            <li><a class="submenuLink">연혁</a></li>
+            <li><a class="submenuLink">섬기는사람들</a></li>
+            <li><a class="submenuLink">예배안내</a></li>
+            <li><a class="submenuLink">오시는길</a></li>
+          </ul>
+        </li>
+        <li class="topMenuLi">
+          <a class="menuLink">예배</a>
+          <ul class="submenu">
+            <li><a class="submenuLink">신상TV</a></li>
+            <li><a class="submenuLink">찬양대</a></li>
+          </ul>
+        </li>
+        <li class="topMenuLi">
+          <a class="menuLink">선교</a>
+          <ul class="submenu">
+            <li><a class="submenuLink">해외선교</a></li>
+            <li><a class="submenuLink">국내선교</a></li>
+          </ul>
+        </li>
+        <li class="topMenuLi">
+          <a class="menuLink">다음세대</a>
+          <ul class="submenu">
+            <li><a class="submenuLink">유치부</a></li>
+            <li><a class="submenuLink">어린이부</a></li>
+            <li><a class="submenuLink">중고등부</a></li>
+            <li><a class="submenuLink">아름회</a></li>
+          </ul>
+        </li>
+        <li class="topMenuLi">
+          <a class="menuLink">커뮤니티</a>
+          <ul class="submenu">
+            <li><a class="submenuLink">공지사항</a></li>
+            <li><a class="submenuLink">자유게시판</a></li>
+          </ul>
+        </li>
+      </ul>
+    </div>
+  </nav>
+</div>
+<!--==============================================================-->
+
+<div align="center">
+  <img class="signuplogo" src="img/signuplogo.png"/><p>환영합니다</p>
+</div>
+<form name="sign_up_form" method="post">
+   <table align="center" width="940" style="padding:5px 0 5px 0; ">
+      <tr class = "line" height="3" bgcolor="4F81BD"><td  class = "line" colspan="2" align="center"></td></tr>
+      <tr>
+         <th>이름</th>
+         <td><input type="text" name="myname"></td>
+      </tr>
+      <tr>
+         <th>ID</th>
+         <td><input type="text" name="myid"></td>
+      </tr>
+      <tr>
+         <th>비밀번호</th>
+         <td><input type="password" name="pw"></td>
+       </tr>
+       <tr>
+          <th>생년월일</th>
+          <td><input type="number" name="year">년
+          <select name="month">
+                 <option value="1">1</option>
+                 <option value="2">2</option>
+                 <option value="3">3</option>
+                 <option value="4">4</option>
+                 <option value="5">5</option>
+                 <option value="6">6</option>
+                 <option value="7">7</option>
+                 <option value="8">8</option>
+                 <option value="9">9</option>
+                 <option value="10">10</option>
+                 <option value="11">11</option>
+                 <option value="12">12</option>
+          </select>월
+          <select name="date">
+            <option value="1">1</option><option value="2">2</option><option value="3">3</option><option value="4">4</option><option value="5">5</option>
+            <option value="6">6</option><option value="7">7</option><option value="8">8</option><option value="9">9</option><option value="10">10</option>
+            <option value="11">11</option><option value="12">12</option><option value="13">13</option><option value="14">14</option><option value="15">15</option>
+            <option value="16">16</option><option value="17">17</option><option value="18">18</option><option value="19">19</option><option value="20">20</option>
+            <option value="21">21</option><option value="22">22</option><option value="23">23</option><option value="24">24</option><option value="25">25</option>
+            <option value="26">26</option><option value="27">27</option><option value="28">28</option><option value="29">29</option><option value="30">30</option>><option value="31">31</option>
+          </select>일
+          </td>
+       </tr>
+       <tr>
+          <th>전화번호</th>
+          <td><input type="number" name="fst_ph">-<input type="number" name="mid_ph">-<input type="number" name="last_ph"></td>
+        </tr>
+
+        <tr>
+             <td class="btn" style="width:700px;" colspan="2" align="center">
+               <input type="submit" value="회원가입">
+               <input type="reset"  value="취소">
+            </td>
+        </tr>
+        <tr class = "line" height="3" bgcolor="4F81BD"><td  class = "line" colspan="2" align="center"></td></tr>
+    </table>
+ </form>
+
+
+</body>
+</html>
