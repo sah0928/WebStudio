@@ -1,10 +1,9 @@
 body {
-  font-family: "맑은 고딕", Dotum;
   margin:0 auto;
 }
 
 /* Reset */
-* {margin:0;padding:0;font-family:'Roboto', 'notokr', sans-serif;font-weight:500;font-size:13px;color:#475058;-webkit-text-size-adjust:100%;word-break: keep-all;word-wrap: break-word;}
+* {text-decoration:none;margin:0;padding:0;font-family: "맑은 고딕", Dotum;font-weight:500;font-size:13px;color:#475058;-webkit-text-size-adjust:100%;word-break: keep-all;word-wrap: break-word;}
 ul,li {list-style:none;}
 
 /* layout */
@@ -13,12 +12,12 @@ ul,li {list-style:none;}
 
 /* header */
 .header {top:0;width:100%;box-shadow:0px -8px 26px 5px rgba(0,0,0,0.2);}
-.header .logo {display:inline-block;position:absolute;left:5px;top:12px;z-index:0;width:163px;height:65px;}
+.header .logo {display:inline-block;position:absolute;left:5px;top:7px;z-index:0;width:320px;height:72px;}
 .header .top {position:relative;width:100%;height:60px;background:#71ad2c;}
 .header .top .util_menu {}
 .header .top .util_menu > a {display:inline-block;position:relative;margin:0 0 0 53px;padding:0 14px 0 0;font-size:16px;color:#fff;line-height:1em;}
-.header .top .util_menu .btn_login {display:inline-block;position:absolute;right:130px;top:10px;z-index:0;margin-right: 20px;padding: 10px;border: 2px solid;border-radius: 0.2em;}
-.header .top .util_menu .btn_signup {display:inline-block;position:absolute;right:20px;top:10px;z-index:0;margin-right: 20px;padding: 10px;border: 2px solid;border-radius: 0.2em;}
+.header .top .util_menu .btn_login {display:inline-block;position:absolute;right:180px;top:10px;z-index:0;margin-right: 20px;padding: 10px;border: 2px solid;border-radius: 0.2em;}
+.header .top .util_menu .btn_signup {display:inline-block;position:absolute;right:70px;top:10px;z-index:0;margin-right: 20px;padding: 10px;border: 2px solid;border-radius: 0.2em;}
 
 .header .topMenu {overflow:hidden;position:relative;width:100%;height:300px;background:#fff url(img/bg_gnb.gif) repeat-x 0 -16px;}
 .header .topMenu .content::after {
@@ -28,11 +27,11 @@ ul,li {list-style:none;}
 	width:373px;height:243px;
 }
 
-.header .topMenu .gnb {display:inline-block;position:absolute;left:264px;top:35px;z-index:0;}
+.header .topMenu .gnb {display:inline-block;position:absolute;left:380px;top:35px;z-index:0;}
 .header .topMenu .gnb::after {content:'';clear:both;display:block;}
-.header .topMenu .gnb > li {float:left;position:relative;display:inline-block;background:url(img/bar_black.png) no-repeat 0 2px;text-align:center;}
+.header .topMenu .gnb > li {float:left;position:relative;display:inline-block;background:url(img/bar_black.png) no-repeat 0 3px;text-align:center;}
 .header .topMenu .gnb > li:first-child {background:none;}
-.header .topMenu .gnb .menuLink {display:inline-block;position:relative;z-index:20;height:60px;font-size:20px;color:#000;line-height:1em;text-align:center;font-weight:bold;font-family:'RobotoSlab';font-weight:700;}
+.header .topMenu .gnb .menuLink {display:inline-block;position:relative;z-index:20;height:60px;font-size:20px;color:#000;line-height:1em;text-align:center;font-weight:bold;font-family:'한컴 소망 M';font-weight:300;}
 
 .header .topMenu .gnb .topMenuLi .menuLink {background:none;}
 .header .topMenu .gnb .topMenuLi:hover .menuLink,
