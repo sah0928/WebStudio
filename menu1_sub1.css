@@ -82,8 +82,16 @@ ul,li {list-style:none;}
   color: green;
 }
 
-#img_list td { width:50px; text-align:center; padding-left: 50px;padding-top:20px;}
-#slide_btn{ margin-left:20px; margin-top:20px;}
-.max-small{
-  width: 300px; height: 300px;  /* 이미지 더 큰거 넣어야됨*/
-}
+.sub-wrap { width:980px; margin:0 auto; }
+.sub-wrap .snb { float:left; width:190px; min-height:600px; }
+.sub-wrap .snb h2 { font-family: '한컴 소망 M', Malgun Gothic;font-size:25px; color:#000; padding:26px 0; border-bottom:1px solid #000; letter-spacing:-0.125em; }
+.sub-wrap .snb .snb-list { width:100%; }
+.sub-wrap .snb .snb-list li { list-style:none; width:100%; height:38px; line-height:38px; border-bottom:1px solid #cccccc; }
+.sub-wrap .snb .snb-list li a { display:block; font-size:16px; color:#555; text-decoration:none; }
+.sub-wrap .snb .snb-list li a:hover { background:#ececec; }
+.sub-wrap .snb .snb-list li a:hover::after {content:url('img/on_icon.png'); height:100%; float:right; }
+.sub-wrap .snb .snb-list li.snb-sub { height:30px !important; line-height:30px !important; border-bottom:none !important; }
+.sub-wrap .snb .snb-list li.snb-sub a { transition:padding 100ms ease-in-out; font-size:13px !important; color:#555; padding-left:20px; }
+.sub-wrap .snb .snb-list li.snb-sub a:hover { transition:padding 100ms ease-in-out; padding-left:30px; }
+.sub-wrap .sub-content { float:right; width:760px; }
+.sub-wrap .sub-content .table-title {line-height:80px;font-size:30px;height:80px;color:#000;font-weight:500;font-family:'한컴 소망 M';}
