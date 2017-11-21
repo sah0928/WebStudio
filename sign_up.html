@@ -71,7 +71,7 @@
 <!--==============================================================-->
 
 <div align="center">
-  <img class="signuplogo" src="img/signuplogo.png"/><p>환영합니다</p>
+  <img claㄴss="signuplogo" src="img/signuplogo.png"/><p>환영합니다</p>
 </div>
 <form name="sign_up_form" method="post">
    <table align="center" width="940" style="padding:5px 0 5px 0; ">
@@ -87,8 +87,12 @@
       <tr>
          <th>비밀번호</th>
          <td><input type="password" name="pw"></td>
-       </tr>
-       <tr>
+      </tr>
+      <tr>
+          <th>비밀번호확인</th>
+          <td><input type="password" name="pw"></td>
+      </tr>
+      <tr>
           <th>생년월일</th>
           <td><input type="number" name="year">년
           <select name="month">
@@ -114,15 +118,33 @@
             <option value="26">26</option><option value="27">27</option><option value="28">28</option><option value="29">29</option><option value="30">30</option>><option value="31">31</option>
           </select>일
           </td>
-       </tr>
-       <tr>
+      </tr>
+      <tr>
           <th>전화번호</th>
           <td><input type="number" name="fst_ph">-<input type="number" name="mid_ph">-<input type="number" name="last_ph"></td>
-        </tr>
-
+      </tr>
+        <script type="text/javascript">
+          function button_event(){
+            if (sign_up_form.myid.value == "") {
+              alert("아이디를 입력하지 않았습니다.")
+              sign_up_form.myid.focus()
+              return false;
+            }else if (sign_up_form.myname.value =="") {
+              alert("이름를 입력하지 않았습니다.")
+              sign_up_form.myname.focus()
+              return false;
+            }else if(sign_up_form.pw.value==""){
+              alert("비밀번호를 입력하지 않았습니다.")
+              sign_up_form.pw.focus();
+              return false;
+            }else{
+              alert("회원가입이 되었습니다. 승인을 기다려주세요.")
+            }
+          }
+        </script>
         <tr>
              <td class="btn" style="width:700px;" colspan="2" align="center">
-               <input type="submit" value="회원가입">
+               <input type="submit" onclick="button_event();" value="회원가입">
                <input type="reset"  value="취소">
             </td>
         </tr>
