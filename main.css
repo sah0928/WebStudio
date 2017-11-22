@@ -3,7 +3,7 @@ body {
 }
 
 /* Reset */
-* {text-decoration:none;margin:0;padding:0;font-family: "맑은 고딕", Dotum;font-weight:500;font-size:13px;color:#475058;-webkit-text-size-adjust:100%;word-break: keep-all;word-wrap: break-word;}
+* {text-decoration:none;margin:0;padding:0;font-family: "맑은 고딕";font-weight:500;font-size:13px;color:#475058;-webkit-text-size-adjust:100%;word-break: keep-all;word-wrap: break-word;}
 ul,li {list-style:none;}
 
 /* layout */
@@ -12,11 +12,12 @@ ul,li {list-style:none;}
 
 /* header */
 .header .logo {display:inline-block;position:absolute;left:5px;top:7px;z-index:0;width:320px;height:72px;}
-.header .top {position:relative;width:100%;height:60px;background:#71ad2c;}
+.header .top {position:relative;width:100%;height:30px;background:gray;}
 .header .top .util_menu {}
-.header .top .util_menu > a {display:inline-block;position:relative;margin:0 0 0 53px;padding:0 14px 0 0;font-size:16px;color:#fff;line-height:1em;}
-.header .top .util_menu .btn_login {display:inline-block;position:absolute;right:180px;top:10px;z-index:0;margin-right: 20px;padding: 10px;border: 2px solid;border-radius: 0.2em;}
-.header .top .util_menu .btn_signup {display:inline-block;position:absolute;right:70px;top:10px;z-index:0;margin-right: 20px;padding: 10px;border: 2px solid;border-radius: 0.2em;}
+.header .top .util_menu > a {display:inline-block;position:relative;margin:0 0 0 53px;padding:0 14px 0 0;font-size:14px;color:#fff;line-height:1em;}
+.header .top .util_menu .btn_login {display:inline-block;position:absolute;right:170px;top:-2px;z-index:0;margin-right: 20px;padding: 10px;}
+.header .top .util_menu .btn_sidebar {display:inline-block;position:absolute;right:150px;top:-4px;z-index:0;margin-right: 20px;padding: 10px;}
+.header .top .util_menu .btn_signup {display:inline-block;position:absolute;right:80px;top:-2px;z-index:0;margin-right: 20px;padding: 10px;}
 
 .header .topMenu {overflow:hidden;position:relative;width:100%;height:125px;background:#fff url(img/bg_gnb.gif) repeat-x 0 -16px;}
 .header .topMenu .content::after {
@@ -30,7 +31,7 @@ ul,li {list-style:none;}
 .header .topMenu .gnb::after {content:'';clear:both;display:block;}
 .header .topMenu .gnb > li {float:left;position:relative;display:inline-block;background:url(img/bar_black.png) no-repeat 0 3px;text-align:center;}
 .header .topMenu .gnb > li:first-child {background:none;}
-.header .topMenu .gnb .menuLink {display:inline-block;position:relative;z-index:20;height:60px;font-size:20px;color:#000;line-height:1em;text-align:center;font-weight:bold;font-family:'한컴 소망 M';font-weight:300;}
+.header .topMenu .gnb .menuLink {display:inline-block;position:relative;z-index:20;height:60px;font-size:20px;color:#000;line-height:1em;text-align:center;font-weight:bold;font-family:"맑은 고딕";font-weight:500;}
 
 .header .topMenu .gnb .topMenuLi .menuLink {background:none;}
 .header .topMenu .gnb .topMenuLi:hover .menuLink,
@@ -79,7 +80,7 @@ ul,li {list-style:none;}
 }
 
 .submenuLink:hover { /* 하위 메뉴의 a 태그의 마우스 오버 스타일 설정 */
-  color: green;
+  color: blue;
 }
 
 #img_list td { width:50px; text-align:center; padding-left: 50px;padding-top:20px;}
