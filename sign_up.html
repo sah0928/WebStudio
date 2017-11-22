@@ -90,7 +90,7 @@
       </tr>
       <tr>
           <th>비밀번호확인</th>
-          <td><input type="password" name="pw"></td>
+          <td><input type="password" name="pw_check"></td>
       </tr>
       <tr>
           <th>생년월일</th>
@@ -136,6 +136,14 @@
             }else if(sign_up_form.pw.value==""){
               alert("비밀번호를 입력하지 않았습니다.")
               sign_up_form.pw.focus();
+              return false;
+            }else if(sign_up_form.pw_check.value==""){
+              alert("비밀번호 확인란을 입력해주세요.")
+              sign_up_form.pw_check.focus();
+              return false;
+            }else if(sign_up_form.fst_ph.value=="" || sign_up_form.mid_ph.value=="" || sign_up_form.last_ph.value==""){
+              alert("전화번호를 입력하지 않았습니다.")
+              sign_up_form.fo.focus();
               return false;
             }else{
               alert("회원가입이 되었습니다. 승인을 기다려주세요.")
