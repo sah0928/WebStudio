@@ -18,8 +18,9 @@ ul,li {list-style:none;}
 .header .top .util_menu .btn_login {display:inline-block;position:absolute;right:170px;top:-2px;z-index:0;margin-right: 20px;padding: 10px;}
 .header .top .util_menu .btn_sidebar {display:inline-block;position:absolute;right:150px;top:-4px;z-index:0;margin-right: 20px;padding: 10px;}
 .header .top .util_menu .btn_signup {display:inline-block;position:absolute;right:80px;top:-2px;z-index:0;margin-right: 20px;padding: 10px;}
+.header .top .util_menu .btn_logout {display:inline-block;position:absolute;right:80px;top:-2px;z-index:0;margin-right: 20px;padding: 10px;} /*로그인상황*/
 
-.header .topMenu {overflow:hidden;position:relative;width:100%;height:125px;background:#fff url(img/bg_gnb.gif) repeat-x 0 -16px;}
+.header .topMenu {overflow:hidden;position:relative;width:100%;height:125px;background:#fff url(../img/bg_gnb.gif) repeat-x 0 -16px;}
 .header .topMenu .content::after {
 	content:'';
 	display:inline-block;
@@ -29,13 +30,13 @@ ul,li {list-style:none;}
 
 .header .topMenu .gnb {display:inline-block;position:absolute;left:380px;top:35px;z-index:0;}
 .header .topMenu .gnb::after {content:'';clear:both;display:block;}
-.header .topMenu .gnb > li {float:left;position:relative;display:inline-block;background:url(img/bar_black.png) no-repeat 0 3px;text-align:center;}
+.header .topMenu .gnb > li {float:left;position:relative;display:inline-block;background:url(../img/bar_black.png) no-repeat 0 3px;text-align:center;}
 .header .topMenu .gnb > li:first-child {background:none;}
 .header .topMenu .gnb .menuLink {display:inline-block;position:relative;z-index:20;height:60px;font-size:20px;color:#000;line-height:1em;text-align:center;font-weight:bold;font-family:"맑은 고딕";font-weight:500;}
 
 .header .topMenu .gnb .topMenuLi .menuLink {background:none;}
 .header .topMenu .gnb .topMenuLi:hover .menuLink,
-.header .topMenu .gnb .topMenuLi.active .menuLink {background:url(img/bg_gnb_over.png) no-repeat 50% 90%;}
+.header .topMenu .gnb .topMenuLi.active .menuLink {background:url(../img/bg_gnb_over.png) no-repeat 50% 90%;}
 
 .topMenu ul li { /* 메인 메뉴 안에 ul 태그 안에 있는 li 태그의 스타일 적용(상위/하위메뉴 모두) */
   float: left;

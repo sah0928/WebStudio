@@ -14,9 +14,7 @@
   <div class="top">
     <div class="content">
       <div class="util_menu">
-        <a href="sign_in.html" class="btn_login">로그인</a>
-        <a class="btn_sidebar">|</a>
-        <a href="sign_up.html" class="btn_signup">회원가입</a>
+        <a href="" class="btn_logout">로그아웃</a>
       </div>
     </div>
   </div>
@@ -73,41 +71,41 @@
 <!--========================header end============================-->
 
 <div align="center">
-  <h1>아이디 찾기</h1>
+  <h1>로그인</h1>
   <h2>사랑과 행복이 넘치는 전주신상교회입니다</h2>
 
   <hr class="line"></hr>
 
-  <form name="find_id_form" method="post">
+  <form name="sign_in_form" method="post">
      <table align="center" style="padding:5px 0 5px 0; ">
         <tr>
-           <th>이름</th>
-           <td><input type="text" name="name"></td>
+           <th>ID</th>
+           <td><input type="text" name="myid"></td>
         </tr>
         <tr>
-            <th>전화번호</th>
-            <td><input type="text" name="fst_ph">-<input type="text" name="mid_ph">-<input type="text" name="last_ph"></td>
+           <th>비밀번호</th>
+           <td><input type="password" name="pw"></td>
         </tr>
       </table>
     </form>
 
     <div class="btn">
-      <input type="submit" onclick="button_event();" value="아이디 찾기">
+      <input type="submit" onclick="button_event();" value="로그인">
       <script type="text/javascript">
         function button_event(){
-          if (find_id_form.name.value == "") {
-            alert("이름을 입력하지 않았습니다.")
-            find_id_form.name.focus()
+          if (sign_in_form.myid.value == "") {
+            alert("아이디를 입력하지 않았습니다.")
+            sign_in_form.myid.focus()
             return false;
-          }else if(find_id_form.fst_ph.value=="" || find_id_form.mid_ph.value=="" || find_id_form.last_ph.value==""){
-            alert("전화번호를 입력하지 않았습니다.")
-            find_id_form.fst_ph.focus();
+          }else if(sign_in_form.pw.value==""){
+            alert("비밀번호를 입력하지 않았습니다.")
+            sign_in_form.pw.focus();
             return false;
           }
         }
       </script>
+      <input type="button" onclick = "location.href = 'find_id.html'" value="아이디 찾기">
       <input type="button" onclick = "location.href = 'find_pw.html'" value="비밀번호 찾기">
-      <input type="button" onclick = "location.href = 'sign_in.html'" value="로그인">
     </div>
 
     <hr class="line"></hr>

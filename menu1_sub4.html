@@ -5,6 +5,7 @@
   <meta name="description" content="The Overflowing church website's main page" />
   <meta name="author" content="unikys@gmail.com" />
   <link rel="stylesheet" type="text/css" href="css/main.css" title="style" />
+  <link rel="stylesheet" type="text/css" href="css/menu1_sub.css" title="style" />
   <title>전주신상교회</title>
 </head>
 <body class="fullpage">
@@ -68,57 +69,30 @@
         </ul>
       </div>
     </nav>
-  </div>
-  <!--<img name="nemo" onclick="javascript:chgimg()" src="img/mainimg1.jpg"-->
-
-  <div id="img_list" style="width:100%; height:300px; overflow:hidden;">
-    <img class="max-small" src="img/mainimg1.jpg"/>
-    <img class="max-small" src="img/mainimg2.png"/>
-    <img class="max-small" src="img/mainimg3.jpg"/>
-  </div>
-
-  <input id="slide_btn" type="button" name="" value="<" onclick="scroll_left()"> <input type="button" name="" value=">" onclick="scroll_right()">
-  눌러 보세요 *^^*
-
-  <script type="text/javascript">
-
-  	var amt = 60;	// 움직임 값 (클수록 빠름)
-  	var gap = 300;	// 이미지와 사이 공간의 합
-
-  	var cnt = 0;
-  	var init_amt = amt;
-
-  	function scroll_right(){
-  		document.getElementById('img_list').scrollLeft += amt;
-  		if(cnt >= gap){
-  			cnt = 0;
-  			var adj = document.getElementById('img_list').scrollLeft % gap;
-  			document.getElementById('img_list').scrollLeft -= adj;
-  			amt = init_amt;
-  		}
-  		else{
-  			amt = Math.ceil(amt / 1.2);
-  			setTimeout(scroll_right, 10);
-  		}
-  		cnt = cnt + amt;
-  	}
-
-  	function scroll_left(){
-  		document.getElementById('img_list').scrollLeft -= amt;
-  		if(cnt >= gap){
-  			cnt = 0;
-  			var adj = document.getElementById('img_list').scrollLeft % gap;
-  			if(adj > 0) adj = gap - adj
-  			document.getElementById('img_list').scrollLeft += adj;
-  			amt = init_amt;
-  		}
-  		else{
-  			amt = Math.ceil(amt / 1.2);
-  			setTimeout(scroll_left, 10);
-  		}
-  		cnt = cnt + amt;
-  	}
-  </script>
+  </div> <!--header end-->
+  <div class="sub-wrap">
+    <div class="snb">
+      <h2>교회소개</h2>
+      <ul class="snb-list">
+        <li><a href="menu1_sub1.html">인사말</a></li>
+        <li><a href="menu1_sub2.html">연혁</a></li>
+        <li><a href="menu1_sub3.html">섬기는분들</a></li>
+        <li><a href="menu1_sub4.html">예배안내</a></li>
+        <li><a href="menu1_sub5.html">오시는길</a></li>
+      </ul>
+    </div>
+    <div class="sub-content">
+      <table class="content-table">
+        <tbody>
+          <tr>
+            <td height="90" valign="top">
+              <div class="table-title">예배안내</div>
+            </td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+  </div> <!--sub-wrap end-->
 </div> <!--wrap end-->
 </body>
 </html>
