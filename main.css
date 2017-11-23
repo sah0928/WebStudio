@@ -80,11 +80,10 @@ ul,li {list-style:none;}
 }
 
 .submenuLink:hover { /* 하위 메뉴의 a 태그의 마우스 오버 스타일 설정 */
-  color: blue;
+  color: green;
 }
 
-#img_list td { width:50px; text-align:center; padding-left: 50px;padding-top:20px;}
 #slide_btn{ margin-left:20px; margin-top:20px;}
 .max-small{
-  width: 300px; height: 300px;  /* 이미지 더 큰거 넣어야됨*/
+  width: 100%; height: 300px;  /* 이미지 더 큰거 넣어야됨*/
 }
