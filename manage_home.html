@@ -73,17 +73,13 @@
 <!--========================header end============================-->
 
 <div align="center">
-  <h1>로그인</h1>
-  <h2>사랑과 행복이 넘치는 전주신상교회입니다</h2>
+  <h1>관리자페이지</h1>
+  <h2>Administration</h2>
 
   <hr class="line"></hr>
 
-  <form name="sign_in_form" method="post">
+  <form name="admin_form" method="post">
      <table align="center" style="padding:5px 0 5px 0; ">
-        <tr>
-           <th>ID</th>
-           <td><input type="text" name="myid"></td>
-        </tr>
         <tr>
            <th>비밀번호</th>
            <td><input type="password" name="pw"></td>
@@ -92,22 +88,16 @@
     </form>
 
     <div class="btn">
-      <input type="submit" onclick="button_event();" value="로그인">
+      <input type="submit" onclick="button_event();" value="접속">
       <script type="text/javascript">
         function button_event(){
-          if (sign_in_form.myid.value == "") {
-            alert("아이디를 입력하지 않았습니다.")
-            sign_in_form.myid.focus()
-            return false;
-          }else if(sign_in_form.pw.value==""){
+          if(admin_form.pw.value==""){
             alert("비밀번호를 입력하지 않았습니다.")
-            sign_in_form.pw.focus();
+            admin_form.pw.focus();
             return false;
           }
         }
       </script>
-      <input type="button" onclick = "location.href = 'find_id.html'" value="아이디 찾기">
-      <input type="button" onclick = "location.href = 'find_pw.html'" value="비밀번호 찾기">
     </div>
 
     <hr class="line"></hr>
