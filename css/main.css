@@ -16,7 +16,8 @@ ul,li {list-style:none;}
 .header .top .util_menu {}
 .header .top .util_menu > a {display:inline-block;position:relative;margin:0 0 0 53px;padding:0 14px 0 0;font-size:14px;color:#fff;line-height:1em;}
 .header .top .util_menu .btn_login {display:inline-block;position:absolute;right:170px;top:-2px;z-index:0;margin-right: 20px;padding: 10px;}
-.header .top .util_menu .btn_sidebar {display:inline-block;position:absolute;right:150px;top:-4px;z-index:0;margin-right: 20px;padding: 10px;}
+.header .top .util_menu .btn_admin {display:inline-block;position:absolute;right:170px;top:-2px;z-index:0;margin-right: 20px;padding: 10px;} /*관리자상황*/
+.header .top .util_menu .btn_sidebar {display:inline-block;position:absolute;right:150px;top:-3px;z-index:0;margin-right: 20px;padding: 10px;}
 .header .top .util_menu .btn_signup {display:inline-block;position:absolute;right:80px;top:-2px;z-index:0;margin-right: 20px;padding: 10px;}
 .header .top .util_menu .btn_logout {display:inline-block;position:absolute;right:80px;top:-2px;z-index:0;margin-right: 20px;padding: 10px;} /*로그인상황*/
 
