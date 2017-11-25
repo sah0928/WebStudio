@@ -1,4 +1,7 @@
-<!DOCTYPE html>         <!--//백업용임 ㅎㅎ-->
+<?php
+	require_once("dbconfig.php");
+?>
+<!DOCTYPE html>
 <html lang="ko-KR">
 <head>
   <meta charset="utf-8"/>
@@ -6,6 +9,7 @@
   <meta name="author" content="unikys@gmail.com" />
   <link rel="stylesheet" type="text/css" href="css/main.css" title="style" />
   <link rel="stylesheet" type="text/css" href="css/menu1_sub.css" title="style" />
+  <link rel="stylesheet" type="text/css" href="css/menu2_sub.css" title="style" />
   <title>전주신상교회</title>
 </head>
 <body class="fullpage">
@@ -70,6 +74,7 @@
       </div>
     </nav>
   </div> <!--header end-->
+
   <div class="sub-wrap">
     <div class="snb">
       <h2>커뮤니티</h2>
@@ -79,16 +84,87 @@
       </ul>
     </div>
     <div class="sub-content">
-      <table class="content-table">
-        <tbody>
-          <tr>
-            <td height="90" valign="top">
-              <div class="table-title">공지사항</div>
-            </td>
-          </tr>
-        </tbody>
-      </table>
+      <table>
+  			<caption class="readHide">자유게시판</caption>
+  			<thead>
+  				<tr>
+  					<th scope="col" class="no">번호</th>
+  					<th scope="col" class="title">제목</th>
+  					<th scope="col" class="author">작성자</th>  //작성자 id말고 이름으로 나타내주셈
+  					<th scope="col" class="date">날짜</th>
+  					<th scope="col" class="hit">조회</th>
+  				</tr>
+  			</thead>
+  			<tbody>
+  					<?php
+  						$sql = 'select * from board_free order by b_no desc';
+  						$result = $db->query($sql);
+  						while($row = $result->fetch_assoc())
+  						{
+  							$datetime = explode(' ', $row['b_date']);
+  							$date = $datetime[0];
+  							$time = $datetime[1];
+  							if($date == Date('Y-m-d'))
+  								$row['b_date'] = $time;
+  							else
+  								$row['b_date'] = $date;
+  					?>
+  				<tr>
+  					<td class="no"><?php echo $row['b_no']?></td>
+  					<td class="title"><?php echo $row['b_title']?></td>
+  					<td class="author"><?php echo $row['b_id']?></td>
+  					<td class="date"><?php echo $row['b_date']?></td>
+  					<td class="hit"><?php echo $row['b_hit']?></td>
+  				</tr>
+  					<?php
+          }
+  					?>
+  			</tbody>
+  		</table>
+      <form action="write.html">
+			     <input type="submit" value="글쓰기">
+		  </form>
     </div>
+    <div>  <!-- 밑에 1,2,3....페이지-->
+	    <tr>
+			<?php
+                        // 전체 페이지 수
+			$total_page = ceil($total_record / $record_per_page);
+                        // 전체 블럭 수
+			$total_block = ceil($total_page / $page_per_block);
+
+                        // 현재 블럭이 1보다 클 경우
+			if(1 < $now_block ) {
+			  $pre_page = ($now_block - 1) * $page_per_block;
+			  echo '<a href="list.php?page='.$pre_page.'">이전</a>';
+
+			}
+
+			$start_page = ($now_block - 1) * $page_per_block + 1;
+			$end_page = $now_block * $page_per_block;
+
+                        // 총 페이지와 마지막 페이지를 같게 하기, 즉 글이 있는 페이지까지만 설정
+			if($end_page > $total_page) {
+			  $end_page = $total_page;
+			}
+
+			?>
+
+			<?php for($i = $start_page; $i <= $end_page; $i++) {?>
+			    <td><a href="list.php?page=<?= $i ?>"><?= $i ?></a></td>
+			<?php }?>
+
+			<?php
+                        // 현재 블럭이 총 블럭 수 보다 작을 경우
+			if($now_block < $total_block) {
+			  $post_page = $now_block * $page_per_block + 1;
+			  echo '<a href="list.php?page='.$post_page.'">다음</a>';
+			}
+
+			?>
+		</tr>
+	</div><!-- 밑에 1,2,3....페이지-->
+
   </div> <!--sub-wrap end-->
 </div> <!--wrap end-->
 </body>

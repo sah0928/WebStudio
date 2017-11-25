@@ -1,4 +1,7 @@
-<!DOCTYPE html>         <!--//백업용임 ㅎㅎ-->
+<?php
+	require_once("dbconfig.php");
+?>
+<!DOCTYPE html>
 <html lang="ko-KR">
 <head>
   <meta charset="utf-8"/>
@@ -6,6 +9,7 @@
   <meta name="author" content="unikys@gmail.com" />
   <link rel="stylesheet" type="text/css" href="css/main.css" title="style" />
   <link rel="stylesheet" type="text/css" href="css/menu1_sub.css" title="style" />
+  <link rel="stylesheet" type="text/css" href="css/menu2_sub.css" title="style" />
   <title>전주신상교회</title>
 </head>
 <body class="fullpage">
@@ -70,24 +74,57 @@
       </div>
     </nav>
   </div> <!--header end-->
+
   <div class="sub-wrap">
     <div class="snb">
-      <h2>커뮤니티</h2>
+      <h2>예배</h2>
       <ul class="snb-list">
-        <li><a href="menu5_sub1.html">공지사항</a></li>
-        <li><a href="menu5_sub2.html">자유게시판</a></li>
+        <li><a href="menu2_sub1.html">신상TV</a></li>
+        <li><a href="menu2_sub2.html">찬양대</a></li>
       </ul>
     </div>
     <div class="sub-content">
-      <table class="content-table">
-        <tbody>
-          <tr>
-            <td height="90" valign="top">
-              <div class="table-title">공지사항</div>
-            </td>
-          </tr>
-        </tbody>
-      </table>
+      <table>
+  			<caption class="readHide">신상TV</caption>
+  			<thead>
+  				<tr>
+  					<th scope="col" class="no">번호</th>
+  					<th scope="col" class="title">제목</th>
+  					<th scope="col" class="author">작성자</th>  //작성자 id말고 이름으로
+  					<th scope="col" class="date">날짜</th>
+  					<th scope="col" class="hit">조회</th>
+  				</tr>
+  			</thead>
+  			<tbody>
+  					<?php
+  						$sql = 'select * from board_free order by b_no desc';
+  						$result = $db->query($sql);
+  						while($row = $result->fetch_assoc())
+  						{
+  							$datetime = explode(' ', $row['b_date']);
+  							$date = $datetime[0];
+  							$time = $datetime[1];
+  							if($date == Date('Y-m-d'))
+  								$row['b_date'] = $time;
+  							else
+  								$row['b_date'] = $date;
+  					?>
+  				<tr>
+  					<td class="no"><?php echo $row['b_no']?></td>
+  					<td class="title"><?php echo $row['b_title']?></td>
+  					<td class="author"><?php echo $row['b_id']?></td>
+  					<td class="date"><?php echo $row['b_date']?></td>
+  					<td class="hit"><?php echo $row['b_hit']?></td>
+  				</tr>
+  					<?php
+  						}
+  					?>
+  			</tbody>
+				<form action="write.html">
+						 <input type="submit" value="글쓰기">
+				</form>
+  		</table>
+
     </div>
   </div> <!--sub-wrap end-->
 </div> <!--wrap end-->
