@@ -255,27 +255,37 @@
       <script type="text/javascript">
         function button_event(){
           if (sign_up_form.myname.value =="") {
-            alert("이름를 입력하지 않았습니다.")
-            sign_up_form.myname.focus()
+            alert("이름를 입력하지 않았습니다.");
+            sign_up_form.myname.focus();
             return false;
           }else if (sign_up_form.myid.value =="") {
-            alert("아이디를 입력하지 않았습니다.")
-            sign_up_form.myid.focus()
+            alert("아이디를 입력하지 않았습니다.");
+            sign_up_form.myid.focus();
             return false;
           }else if(sign_up_form.pw.value==""){
-            alert("비밀번호를 입력하지 않았습니다.")
+            alert("비밀번호를 입력하지 않았습니다.");
             sign_up_form.pw.focus();
             return false;
           }else if(sign_up_form.pw_check.value==""){
-            alert("비밀번호 확인란을 입력해주세요.")
+            alert("비밀번호 확인란을 입력해주세요.");
             sign_up_form.pw_check.focus();
             return false;
           }else if(sign_up_form.fst_ph.value=="" || sign_up_form.mid_ph.value=="" || sign_up_form.last_ph.value==""){
-            alert("전화번호를 입력하지 않았습니다.")
+            alert("전화번호를 입력하지 않았습니다.");
             sign_up_form.fst_ph.focus();
             return false;
-          }else{
-            alert("회원가입이 되었습니다. 승인을 기다려주세요.")
+          }else if(sign_up_form.pw.value != sign_up_form.pw_check.value) {
+            alert("비밀번호가 일치하지 않습니다")
+            sign_up_form.pw.value = "";
+            sign_up_form.pw.focus();
+            return false;
+          }else if(sign_up_form.myid.value.length<4 || sign_up_form.myid.value.length>12) {
+            alert("아이디를 4~12자까지 입력해주세요.");
+            sign_up_form.myid.focus();
+            /*sign_up_form.myid.select();*/
+            return false;
+          }else if{
+            alert("회원가입이 되었습니다. 승인을 기다려주세요.");
           }
         }
       </script>
